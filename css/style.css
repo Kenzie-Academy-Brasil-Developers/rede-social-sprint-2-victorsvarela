@@ -286,6 +286,10 @@ footer .copyright {
 		font-size: 18px;
 	}
 
+	main .highlighted-stories{
+		width: 935px;
+	}
+
 	main .highlighted-stories ul li figure img{
 		width: 77px;
 	}
