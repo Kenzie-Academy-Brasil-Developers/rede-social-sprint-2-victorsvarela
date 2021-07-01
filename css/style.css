@@ -16,12 +16,21 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /* VARIÁVEIS */
 :root{
-  
+  --cor-textos: #262626;
+  --borda-stories: 2px solid #dbdbdb;
+  --padding-stories: 2px;
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	color: var(--cor-textos);
+	font-family: 'Helvetica', Arial, sans-serif;
 }
 
 /*BODY*/
 body{
-
+	width: auto;
 }
 
 /*TOPO*/
@@ -36,16 +45,267 @@ footer{
 
 /*PÁGINA INICIAL*/
 main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #f7f7f7;
 	
 }
 	main .profile-content{
-
+		display: flex;
+		padding: 15px;
+		padding-top: 30px;
 	}
 
-	main .highlighted-stories{
+		main .profile-photo{
+			width: 100%;
+			height: 100%;
+		}
 
+		main .profile-photo figure{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		main .profile-photo figure img{
+			width: 70px;
+			padding: var(--padding-stories);
+			border-radius: 100%;
+			border: var(--borda-stories);
+		}
+
+		main .profile-info{
+			padding-left: 15px;
+		}
+
+		main .profile-info > h1{
+			margin: 0;
+			padding: 0;
+		}
+
+		main .profile-info .profile-data{
+			display: flex;
+		}
+
+		main .profile-info .profile-data p{
+			font-size: 15px;
+			margin: 10px;
+			margin-left: 0;
+		}
+
+		main .profile-info h2 {
+			font-size: 15px;
+			margin-bottom: 0;
+			
+		}
+
+		main .profile-info ul{
+			padding: 0;
+			font-size: 15px;
+			margin-top: 0;
+		}
+
+		main .profile-info ul li{
+			list-style-type: none;
+		}
+
+		main .profile-info ul li p{
+			margin: 0;
+		}
+
+		main .profile-info ul li > a:active, main .profile-info ul li > a:visited{
+			color: blue;
+		}
+
+		main .profile-info .profile-data p span{
+			font-weight: bold;
+		}
+	
+	main .highlighted-stories{
+		padding: 15px;
+		width: 935px;
+		box-sizing: border-box;
+	}
+
+		main .highlighted-stories ul{
+			display: flex;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+
+		}
+
+		main .highlighted-stories ul li{}
+
+		main .highlighted-stories ul li figure{
+			margin: 10px;
+			text-align: center;
+		}
+
+		main .highlighted-stories ul li figure img{
+			width: 50px;
+			border-radius: 100%;
+			padding: var(--padding-stories);
+			border: var(--borda-stories);
+		}
+
+		main .highlighted-stories ul li figure img[src='img/plus-sign.png']{
+			width: 50px;
+			border-radius: 100%;
+			padding: 4px;
+			border: none;
+		}
+
+
+	main .profile-posts{}
+
+		main .profile-posts nav{
+			border-top: 1px solid #dbdbdb;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-transform: uppercase;
+		}
+
+			main .profile-posts nav svg{
+				padding-top: 10px;
+				padding-right: 5px;
+				transform: translateY(-2px);
+			}
+
+			main .profile-posts nav svg:nth-child(1){
+				
+				border-top: 1px solid black;
+				
+			}
+
+			main .profile-posts nav a{
+				transform: translateY(-1px);
+				margin-right: 20px;
+				padding-top: 12px;
+				color: #a5a5a5;
+				font-weight: bolder;
+			}
+
+			main .profile-posts nav a.nav__activee{
+				color: black;
+				border-top: 1px solid black
+			}
+			
+			main .profile-posts nav a:link{
+				text-decoration: none;
+			}
+
+		main .profile-posts ul{
+			list-style-type: none;
+			padding: 0;
+			margin-top: 30px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+			main .profile-posts ul li{
+				width: 293px;
+			}
+
+				main .profile-posts ul li a{}
+
+					main .profile-posts ul li a figure{
+						display: flex;
+						margin: 0;
+						
+					}
+
+						main .profile-posts ul li a figure img{
+							width: 100%;
+						}
+
+
+
+footer .footer-nav{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+footer .footer-nav a{
+	color: rgb(142, 142, 142, 1);
+	margin: 3px;
+}
+
+footer .copyright {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+/* TABLET */
+
+@media screen and (min-width: 426px){
+
+	main .profile-photo{
+		width: 60%;
+	}
+
+	main .profile-photo figure img{
+		width: 120px;
+	}
+
+
+}
+
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 769px){
+
+	main .profile-photo figure img{
+		width: 150px;
+	}
+
+	main .profile-info > h1{
+		font-size: 27px;
+	}
+
+	main .profile-info .profile-data p{
+		font-size: 18px;
+	}
+
+	main .profile-info h2 {
+		font-size: 18px;
+	}
+
+	main .profile-info ul{
+		font-size: 18px;
+	}
+
+	main .highlighted-stories ul li figure img{
+		width: 77px;
+	}
+
+	main .highlighted-stories ul li figure img[src='img/plus-sign.png']{
+		width: 77px;
 	}
 
 	main .profile-posts{
-
+		width: 935px;
 	}
+
+	main .profile-posts ul li{
+		padding-right: 20px;
+		padding-bottom: 20px;
+	}
+
+	main .profile-posts ul li:nth-child(3n){
+		padding-right: 0;
+	}
+
+
+}
