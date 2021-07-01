@@ -126,7 +126,7 @@ main{
 	
 	main .highlighted-stories{
 		padding: 15px;
-		width: 935px;
+		width: 100%;
 		box-sizing: border-box;
 	}
 
@@ -202,13 +202,13 @@ main{
 		main .profile-posts ul{
 			list-style-type: none;
 			padding: 0;
-			margin-top: 30px;
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: center;
 		}
 
 			main .profile-posts ul li{
-				width: 293px;
+				width: 33%;
 			}
 
 				main .profile-posts ul li a{}
@@ -301,6 +301,7 @@ footer .copyright {
 	main .profile-posts ul li{
 		padding-right: 20px;
 		padding-bottom: 20px;
+		width: 293px;
 	}
 
 	main .profile-posts ul li:nth-child(3n){
